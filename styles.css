@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root{
+    --main-background : hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --violet : hsl(277, 64%, 61%);
+    --white : hsl(0, 0%, 100%);
+    --stat-headings : hsla(0, 0%, 100%, 0.6);
+    --main-p :hsla(0, 0%, 100%, 0.75);
+    --Lexend: 'Lexend Deca', sans-serif;
+    --Inter: 'Inter', sans-serif;
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    background-color: var(--main-background);
+    color: var(--white);
+    font-family: 'Inter',sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+p{
+    color: var(--main-p);
+}
+
+.stats-preview-card{
+    max-width: 1080px;
+    height: 446px;
+    border-radius: 5px;
+    background-color: var(--card-background);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.stats-preview-card .stat-text{    
+    margin: 60px 100px 60px 50px;
+}
+
+.stats-preview-card .stat-text h2{
+    font-size: 2.2rem;
+    font-family: var(--Inter);
+}
+
+.stats-preview-card .stat-text .stat-list{
+    margin-top: 40px;
+}
+
+.stats-preview-card .stat-text h2 span{
+    color: hsl(277, 64%, 61%);
+}
+
+.stats-preview-card .stat-text .stat-value{
+    font-size: 1.4rem;
+}
+
+.stats-preview-card .stat-text .stat-list .stats>p{
+    font-family: var(--Lexend);
+    font-size: 0.7rem;
+    color: var(--stat-headings);
+}
+
+.stats-preview-card .stat-image{
+    width: 540px;
+    height: 446px;
+    background: linear-gradient(hsla(277, 64%, 61%,0.9),hsla(277, 64%, 61%,0.9)), url('images/image-header-desktop.jpg') no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    z-index: 10;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.stats-preview-card .stat-text .stat-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width:979px){
+    html{
+        font-size: 12px;
+    }
+    
+    .stats-preview-card{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 90%;
+        height: 670px;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .stats-preview-card .stat-text{    
+        margin: 30px;
+    }
+    
+    .stats-preview-card .stat-image{
+        width: 100%;
+        max-height: 300px;
+        border-radius: 5px 5px 0 0;
+    }
+}
